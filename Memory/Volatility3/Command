@@ -1,0 +1,21 @@
+to show the system information:
+python3 vol.py -f ../Downloads/temp_extract_dir/192-Reveal.dmp windows.info
+
+***********************************************************
+to show the process that run:
+python3 vol.py -f ../Downloads/temp_extract_dir/192-Reveal.dmp windows.pslist
+
+************************************************************
+to show command-line that the process used:
+python3 vol.py -f ../Downloads/temp_extract_dir/192-Reveal.dmp windows.cmdline.CmdLine
+
+************************************************************
+to show the SID for any user that run a process:
+python3 vol.py -f ../Downloads/temp_extract_dir/192-Reveal.dmp windows.getsids | grep 'powershell.exe'
+
+OR this is better
+
+python3 vol.py -f ../Downloads/temp_extract_dir/192-Reveal.dmp windows.sessions | grep '3692' 
+
+************************************************************
+to extract file from the dmp file:
